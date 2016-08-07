@@ -34,7 +34,7 @@ public class loginDAO {
             dbConn = dbConnManager.connect();
 
             Statement stmt = dbConn.createStatement();
-            String log = "SELECT `employee`.`fname`,`employee`.`password`,`employee`.`type` FROM `airconditionmanagementsystem`.`employee` where `employee`.`fname` = '"+details.getUsername()+"' and `employee`.`password` = '"+details.getPassword()+"' and `employee`.`type` = '"+details.getDesignation()+"';";
+            String log = "SELECT `employee`.`fname`,`employee`.`password`,`employee`.`type` FROM `stocksystem`.`employee` where `employee`.`fname` = '"+details.getUsername()+"' and `employee`.`password` = '"+details.getPassword()+"' and `employee`.`type` = '"+details.getDesignation()+"';";
             loginDetails = stmt.executeQuery(log);
             if(loginDetails.first()){
                 return true;

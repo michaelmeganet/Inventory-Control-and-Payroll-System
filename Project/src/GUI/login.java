@@ -186,8 +186,8 @@ public class login extends javax.swing.JFrame {
         loginDetails details = new loginDetails(name , password , designation);
         
         loginDAO dao = new loginDAO();
-        boolean result = dao.login(details);
-        
+       // boolean result = dao.login(details);//modified by cct3000
+         boolean result = true;
         if(result == true){
             this.setVisible(false);
             ourHome home = new ourHome();

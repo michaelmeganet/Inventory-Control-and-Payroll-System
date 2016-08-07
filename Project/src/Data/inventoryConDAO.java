@@ -32,7 +32,7 @@ public class inventoryConDAO {
 
             Statement st = dbConn.createStatement();
 
-            String query = "insert into `airconditionmanagementsystem`.`item` (itemNo,itemName,type,weight,price) values('"+inv.getItemNo()+"' , '"+inv.getItemName()+"' , '"+inv.getType()+"' , '"+inv.getWeight()+"' , '"+inv.getPrice()+"')";
+            String query = "insert into `stocksystem`.`item` (itemNo,itemName,type,weight,price) values('"+inv.getItemNo()+"' , '"+inv.getItemName()+"' , '"+inv.getType()+"' , '"+inv.getWeight()+"' , '"+inv.getPrice()+"')";
             
             
             System.out.println(query);
@@ -100,7 +100,7 @@ public class inventoryConDAO {
             Statement st=dbConn.createStatement();
 
             
-            String query = "delete from `airconditionmanagementsystem`.`item`   where `item`.`itemNo` = '"+inv.getItemNo()+"'";
+            String query = "delete from `stocksystem`.`item`   where `item`.`itemNo` = '"+inv.getItemNo()+"'";
             
             System.out.println(query);
 
@@ -145,7 +145,7 @@ public class inventoryConDAO {
 
             Statement st=dbConn.createStatement();
     
-            String query = "update `airconditionmanagementsystem`.`item`   set `item`.`itemName` = '"+inv.getItemName()+"',`item`.`type` = '"+inv.getType()+"',`item`.`weight` = '"+inv.getWeight()+"',`item`.`price` = '"+inv.getPrice()+"'   where `item`.`itemNo` = '"+inv.getItemNo()+"'";
+            String query = "update `stocksystem`.`item`   set `item`.`itemName` = '"+inv.getItemName()+"',`item`.`type` = '"+inv.getType()+"',`item`.`weight` = '"+inv.getWeight()+"',`item`.`price` = '"+inv.getPrice()+"'   where `item`.`itemNo` = '"+inv.getItemNo()+"'";
             
              System.out.println(query);
 
@@ -179,7 +179,7 @@ public class inventoryConDAO {
         dbConn = dbConnManager.connect();
         try {
             
-            String sql = "select * from `airconditionmanagementsystem`.`item`  where `item`.`itemNo` = '"+search+"' or `item`.`itemName` = '"+search+"' or `item`.`type` = '"+search+"' or `item`.`weight` = '"+search+"' or `item`.`price` = '"+search+"'";
+            String sql = "select * from `stocksystem`.`item`  where `item`.`itemNo` = '"+search+"' or `item`.`itemName` = '"+search+"' or `item`.`type` = '"+search+"' or `item`.`weight` = '"+search+"' or `item`.`price` = '"+search+"'";
            
             Statement st=dbConn.createStatement();
             

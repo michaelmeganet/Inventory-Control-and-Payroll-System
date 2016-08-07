@@ -311,11 +311,13 @@ public class ourHome extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(jDesktopPane1.isOptimizedDrawingEnabled()==true){
         int s = JOptionPane.showConfirmDialog(this, "Do you want to close previous one?");
+        System.out.println("s = " + s);
         if(s==0){
             this. jDesktopPane1.removeAll();
             this.jDesktopPane1.repaint();
             Inventory machine = new Inventory();
             jDesktopPane1.add(machine);
+           // machine.setVisible(true);
             machine.show();
             }
         else if(s==1){
